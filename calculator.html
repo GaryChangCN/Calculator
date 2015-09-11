@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>计算器</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="http://cdn.amazeui.org/amazeui/2.4.2/js/amazeui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css" />
+	</head>
+
+	<body>
+		<div class="con">
+			<div class="am-g" align="center">
+				<h1>计算器</h1>
+			</div>
+			<div class="am-g-fixed">
+				<div class="am-u-sm-12 ">
+					<!--输出框 -->
+					<div class="shuchu" id="shurukuang">
+
+					</div>
+				</div>
+			</div>
+			<div class="am-g-fixed">
+				<!--7 8 9-->
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a7">7</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a8">8</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a9">9</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn- am-btn-warning am-radius" id="jia">+</button>
+				</div>
+			</div>
+			<div class="am-g-fixed">
+				<!--4 5 6-->
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a4">4</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a5">5</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a6">6</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-warning am-radius" id="jian">-</button>
+				</div>
+			</div>
+			<div class="am-g-fixed">
+				<!--1 2 3-->
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a1">1</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a2">2</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a3">3</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-warning am-radius" id="cheng">*</button>
+				</div>
+			</div>
+			<div class="am-g-fixed">
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a0">0</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-success am-radius" id="a.">.</button>
+				</div>
+				<div class="am-u-sm-3 ">
+					<button class="am-btn am-btn-warning am-radius" id="qingchu">C</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-btn-warning am-radius" id="chu">/</button>
+				</div>
+			</div>
+			<div class="am-g-fixed">
+				<div class="am-u-sm-9 dengyu">
+					<button class="am-btn am-radius am-btn-danger" id="deng">=</button>
+				</div>
+				<div class="am-u-sm-3">
+					<button class="am-btn am-radius am-btn-warning" id="ac">ac</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var shuchu = document.getElementById("shurukuang");
+		var a1 = document.getElementById("a1");
+		var a2 = document.getElementById("a2");
+		var a3 = document.getElementById("a3");
+		var a4 = document.getElementById("a4");
+		var a5 = document.getElementById("a5");
+		var a6 = document.getElementById("a6");
+		var a7 = document.getElementById("a7");
+		var a8 = document.getElementById("a8");
+		var a9 = document.getElementById("a9");
+		var a0 = document.getElementById("a0");
+		var adian = document.getElementById("a.");
+		var jia = document.getElementById("jia");
+		var jian = document.getElementById("jian");
+		var cheng = document.getElementById("cheng");
+		var chu = document.getElementById("chu");
+		var deng = document.getElementById("deng");
+		var qingchu=document.getElementById("qingchu");
+		var ac=document.getElementById("ac");
+		ac.onclick=function(){
+			shuchu.innerHTML="";
+		}
+		a1.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 1;
+		}
+		a2.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 2;
+		}
+		a3.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 3;
+		}
+		a4.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 4;
+		}
+		a5.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 5;
+		}
+		a6.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 6;
+		}
+		a7.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 7;
+		}
+		a8.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 8;
+		}
+		a9.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 9;
+		}
+		a0.onclick = function() {
+			shuchu.innerHTML = shuchu.innerHTML + 0;
+		}
+		adian.onclick = function() {
+			shuchu.innerHTML += ".";
+		}
+		jia.onclick = function() {
+			shuchu.innerHTML += "+";
+		}
+		jian.onclick = function() {
+			shuchu.innerHTML += "-";
+		}
+		cheng.onclick = function() {
+			shuchu.innerHTML += "*";
+		}
+		chu.onclick = function() {
+			shuchu.innerHTML += "/"
+		}
+		deng.onclick = function() {
+			shuchu.innerHTML =shuchu.innerHTML+"="+ eval(shuchu.innerHTML);
+		}
+		qingchu.onclick=function(){
+			var a=shuchu.innerHTML;
+			var b=String(a);
+			b=b.substring(0,b.length-1);
+			shuchu.innerHTML=b;
+		}
+	</script>
+	<style type="text/css">
+		.con {
+			width: 100%;
+			background-color: aliceblue;
+			padding-top: 15px;
+			border-top: 3px solid lightblue;
+			border-left: 1px solid lightblue;
+			border-right: 1px solid lightblue;
+		}
+		.am-u-sm-12 {
+			padding: 2px;
+		}
+		.shuchu {
+			border: 2px solid slategrey;
+			border-radius: 5px;
+			height: 40px;
+			background-color: azure;
+			overflow: hidden;
+		}
+		.am-u-sm-3 {
+			text-align: center;
+			padding: 2px;
+		}
+		.am-btn {
+			width: 100%;
+			height: 70px;
+		}
+		.dengyu {
+			padding-top: 3px;
+		}
+	</style>
+
+</html>
